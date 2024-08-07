@@ -21,7 +21,7 @@ class MyPaintWidget(Widget):
     def on_touch_down(self, touch):
         current_time = time.time()
         self.time_stamps.append(current_time)# Record time at touch down
-        Logger.info('Touch: Down, Pos: {}, Time: {}'.format(touch.pos, current_time))
+        Logger.info('Touchs: Down, Pos: {}, Time: {}'.format(touch.pos, current_time))
 
         app = App.get_running_app()# Get the instance of the running app
         app.coord_label.text = f"Last Point: {touch.pos}"# Update the label directly via the app instance
